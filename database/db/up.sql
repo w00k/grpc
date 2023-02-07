@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS `students`;
+DROP TABLE IF EXISTS students;
 
 CREATE TABLE students (
     id VARCHAR(32) PRIMARY KEY,
