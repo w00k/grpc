@@ -1,8 +1,11 @@
 version: "3.8"
 
 services:
-  postgres:
-    build: ./db
+  students:
+    image: postgres:10.3
+    restart: always
+    volumes:
+      - ./db/up.sql:/docker-entrypoint-initdb.d/initdb.sql
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
